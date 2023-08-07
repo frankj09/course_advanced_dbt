@@ -1,7 +1,9 @@
 sources:
   - name: ads_platform
     schema: public
+    description: This source contains data from ad campaigns
     database: raw
     tables:
       - name: daily_ads
+        description: The daily ad campaigns table.
         identifier: ads

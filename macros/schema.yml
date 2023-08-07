@@ -1,0 +1,12 @@
+version: 2
+
+macros:
+  - name: subscription_month
+    description: Get the first or last subscription_month for users that are subscribed during the current month.
+    arguments:
+      - name: min_or_max
+        description: Either 'min' to retrieve the first_month value, or 'max' for the last_month value
+      - name: partition_columns
+        description: Columns to partition by.
+      - name: column
+        description: Which column to check if the user is subscribed on the current month.

@@ -109,8 +109,8 @@ subscription_revenue_by_month AS (
         mrr > 0 AS is_subscribed_current_month,
 
         -- Find the subscriber's first month and last subscription month
-        MIN(CASE WHEN is_subscribed_current_month THEN date_month END) OVER (PARTITION BY user_id, subscription_id) AS first_subscription_month,
-        MAX(CASE WHEN is_subscribed_current_month THEN date_month END) OVER (PARTITION BY user_id, subscription_id) AS last_subscription_month,
+        {{ subscription_month('min', 'user_id, subscription_id') }},
+        {{ subscription_month('max', 'user_id, subscription_id') }},
         first_subscription_month = date_month AS is_first_subscription_month,
         last_subscription_month = date_month AS is_last_subscription_month,
         mrr

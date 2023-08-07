@@ -1,0 +1,16 @@
+models:
+  - name: rolling_avg_test
+    description: Test for the rolling_average macro
+    columns:
+      - name: user_id
+        description: unique id for users
+        tests:
+          - not_null
+
+      - name: avg_3_periods_revenue
+        description: average revenue for the last 3 periods
+        tests:
+          - not_null
+
+      - name: rolling_avg_end_date
+        description: end_date associated with rolling average
