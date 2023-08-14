@@ -119,3 +119,4 @@ Awesome! You are now ready to start the course! 🚀🚀🚀
 - Columns that should never be null must have a not_null schema test.
 - Columns that should be unique must have a unique schema test.
 - Where possible, use schema tests from the dbt_utils or dbt_expectations packages to perform extra verification.
+- In the staging layer, if no transformations have been performed, start tests there instead of at the source.
