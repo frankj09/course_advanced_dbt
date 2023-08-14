@@ -17,6 +17,7 @@ models:
         description: '{{ doc("bingeflix_pricing") }}'
         tests:
           - not_null
+          - assert_sub_plan_amount_is_greater_than_0
 
       - name: payment_period
         description: '{{ doc("bingeflix_payment_period") }}'
