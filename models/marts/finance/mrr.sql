@@ -1,3 +1,7 @@
+{% set import_dim_subscriptions =  unit_testing_select_table(ref('dim_subscriptions'), ref('unit_test_input_dim_subscriptions')) %}
+
+{% set import_dim_dates =  unit_testing_select_table(ref('dim_dates'), ref('unit_test_input_dim_months')) %}
+
 -- This model is created following the dbt MRR playbook: https://www.getdbt.com/blog/modeling-subscription-revenue/
 
 WITH
